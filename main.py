@@ -34,6 +34,23 @@ class Comparison:
             print(e)
             logging.exception(e)
 
+    def compare_to(self):
+        try:
+            a = comp_obj.cartesian_length()
+            b = comp_obj.equality_of_length()
+            diff = a - b
+            print("******************************************************************")
+            if diff > 0:
+                print("line-1 is greater!!!")
+            elif diff < 0:
+                print("line-2 is greater!!!")
+            else:
+                print("Both lines are of same length")
+            print("******************************************************************")
+        except Exception as e:
+            print(e)
+            logging.exception(e)
+
 
 if __name__ == '__main__':
     print("********************************************************************************")
@@ -47,17 +64,8 @@ if __name__ == '__main__':
 
     try:
         comp_obj = Comparison()
-        a = comp_obj.cartesian_length()
-        b = comp_obj.equality_of_length()
-        diff = a - b
-        print("******************************************************************")
-        if diff > 0:
-            print("line-1 is greater!!!")
-        elif diff < 0:
-            print("line-2 is greater!!!")
-        else:
-            print("Both lines are of same length")
-        print("******************************************************************")
+        result = comp_obj.compare_to()
+        print(result)
     except Exception as e:
         print(e)
         logging.exception(e)
