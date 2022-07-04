@@ -47,9 +47,9 @@ def equality_input():
 
 def compare_to():
     try:
-        a = cartesian_input()
-        b = equality_input()
-        diff = a - b
+        line1 = cartesian_input()
+        line2 = equality_input()
+        diff = line1 - line2
         print("******************************************************************")
         if diff > 0:
             print("line-1 is greater!!!")
